@@ -4,19 +4,25 @@ class TTSEngine():
     def __init__(self):
         pass
 
-    def load(self, text : str) -> None:
-        text_pieces = self.divideToPieces(text)
-        audio_pieces = self.findAudio(text_pieces)
-        audio_pieces = self.modifyAudio(audio_pieces)
-
-    def divideToPieces(self, text : str) -> List[str]:
-        text_pieces = text.split()
-        return text_pieces
-    
-    def findAudio(self, text_pieces : List[str]) -> List[Dict]:
+    def _findAudioFile(self, text_element : str) -> str:
         pass
 
-    def modifyAudio(self, audio_pieces : List[Dict]) -> List[Dict]:
+    def load(self, text : str) -> None:
+        text_list = self.textDivide(text)
+        audio_list = self.findAudio(text_list)
+        audio_list = self.modifyAudio(audio_list)
+
+    def textDivide(self, text : str) -> List[str]:
+        text_list = text.split()
+        return text_list
+    
+    def findAudio(self, text_list : List[str]) -> List[Dict]:
+        audio_list = []
+        for text_element in text_list:
+            audio_list.append({})
+            audio_list[-1]['file_name'] = self._findAudioFile(text_element)
+
+    def modifyAudio(self, audio_list : List[Dict]) -> List[Dict]:
         pass
 
     def play(self) -> None:
