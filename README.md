@@ -1,8 +1,8 @@
-# 🗣️ Gibberish Text to Speech
+# Gibberish Text to Speech
 
 This project transforms plain text into **gibberish voice sounds** using a predefined dataset of audio clips mapped to characters and expressions. My motivation was primrily to produce voice system seen in games like Okami, Animal Crossing ect.
 
-## 🎯 What it does
+## What it does
 
 Give it any text and it will:
 
@@ -12,7 +12,7 @@ Give it any text and it will:
 - **Pitch-shift** and **speed up** the audio clips to create varied and dynamic speech-like output.
 - Stitch it all together into one seamless gibberish audio file.
 
-## 🧩 How it works
+## How it works
 
 1. Each character (like `a`, `b`, `c`...) has an associated gibberish sound.
 2. The text is parsed one character at a time.
@@ -20,7 +20,7 @@ Give it any text and it will:
 4. Each sound is pitch-shifted and sped up randomly for variation.
 5. The processed clips are concatenated into a final audio output.
 
-## 🔊 Expression Support
+## Expression Support
 
 The following expressions are supported and have their own dedicated sound effects:
 
@@ -31,25 +31,25 @@ The following expressions are supported and have their own dedicated sound effec
 - `[confused]` — quirky or questioning intonations
 - `[excited]` — fast, high-pitched gibberish
 
-## 📁 File Structure
+## File Structure
 
 ```
 📁 repo/
-├── src 
-    ├── assets           # Audio file location
-    ├── audio_modifier   # class to add audio effects to sound
-    ├── gibberish_tts    # Gibberish generator class
-    ├── pytts            # Pyttsx3 class
-    ├── text_to_speech   # Ochestration class
-    ├── models           # dataclass model
+├── 📁 src 
+    ├── 📁 assets           # Audio file location
+    ├── 📁 audio_modifier   # class to add audio effects to sound
+    ├── 📁 gibberish_tts    # Gibberish generator class
+    ├── 📁 pytts            # Pyttsx3 class
+    ├── 📁 text_to_speech   # Ochestration class
+    ├── 📁 models           # dataclass model
     ├── data.json        # Text data
     ├── generate.py      # Generate funciton
-├── test                 
-├── env                  
+├── 📁 test                 
+├── 📁 env                  
 ├── README.md            
 ```
 
-## 🛠 Requirements
+## Requirements
 
 - Python 3.x
 
@@ -59,13 +59,13 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-## 🚀 Usage
+## Usage
 
 ```bash
 python generate.py
 ```
 This will play the corresponding gibberish audio. The text to play should be in src/data.json file.
 
-## 🎨 Customize
+## Customize
 
 To add your own sounds Just update `src\assets\sound_files\alphabets` with your audio clips. You can also tweak pitch and speed settings inside `generate.py`.
