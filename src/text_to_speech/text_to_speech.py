@@ -1,4 +1,4 @@
-from pytts import TTSEngine
+from gibberish_tts import TTSEngine
 
 class TextToSpeechV1:
     def __init__(self):
